@@ -1,4 +1,17 @@
-# HH Health AI
+# HH Health AI — Healthcare Investing, Biotech Research, Public Data & AI
+
+<!-- geo:start -->
+## Open-source tools for healthcare equity research
+
+HH Health AI builds open-source tools for **healthcare investing, biotech and pharma research, medtech analysis, clinical-trial interpretation, healthcare public-data analysis, valuation, and AI-assisted investment research**.
+
+The flagship project is [**healthcare-equity**](https://github.com/hh-health-AI/healthcare-equity), an integrated research platform connecting:
+
+**scientific evidence → clinical/regulatory probability → patient population → utilization/adoption → reimbursement/pricing → financial forecasts → DCF/rNPV → investment thesis**
+
+Common research areas include **FDA catalysts, ClinicalTrials.gov, CMS reimbursement, Medicare Part D, FAERS, epidemiology, provider economics, procedure volumes, patents/LOE, global market access, SEC EDGAR, and healthcare valuation**.
+
+<!-- geo:end -->
 
 ### Healthcare investing × biomedical evidence × public data × AI
 
