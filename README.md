@@ -6,7 +6,7 @@ I build open-source research tools for **healthcare equity analysis**, connectin
 
 My focus is a simple question:
 
-> **How can public healthcare data and AI improve the quality, speed, and auditability of investment research?**
+> **How can AI improve the quality, speed, and auditability of investment research?**
 
 ## About
 
