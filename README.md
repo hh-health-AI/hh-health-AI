@@ -5,6 +5,7 @@
 
 <p align="center">
   <a href="https://github.com/hh-health-AI/healthcare-equity"><b>Explore the flagship</b></a> &nbsp; · &nbsp;
+  <a href="#research-workflow"><b>Workflows</b></a> &nbsp; · &nbsp;
   <a href="#selected-research-projects"><b>Research projects</b></a> &nbsp; · &nbsp;
   <a href="https://github.com/HHFinAi"><b>Sustainable finance work</b></a>
 </p>
@@ -37,6 +38,71 @@ I build open-source tools for **healthcare investing, biotech research and AI-as
 
 The platform brings together **ClinicalTrials.gov, FDA, CMS, SEC EDGAR and other primary-source research workflows**. It is the canonical integration point; the standalone project repositories below remain available during migration.
 <!-- geo:end -->
+
+<!-- workflow-charts:start -->
+## Research workflow
+
+**Discover → underwrite → decide and communicate → monitor and learn.**
+
+The workflow below comes from the [Healthcare Equity Research Platform](https://github.com/hh-health-AI/healthcare-equity#workflow). It shows how evidence engines, valuation, thesis development and ongoing review connect.
+
+```mermaid
+flowchart TD
+    subgraph DISC["1 · Discover"]
+        ST["screen-themes"] --> IN["initiate<br/>scoping → memo → sub-sector layers"]
+    end
+    subgraph ENG["Evidence engines (co-installed plugins)"]
+        E1["cms-reimbursement"]
+        E2["clinical-catalysts"]
+        E3["provider-adoption"]
+        E4["procedure-exposure"]
+    end
+    FIN[("Financial layer<br/>filings & transcripts · Quartr / EDGAR")]
+    subgraph UW["2 · Underwrite"]
+        MV["model-valuation<br/>economic unit → formula → scenarios"] <--> TH["thesis<br/>variant perception · steel-man · pre-mortem"]
+        ME["meetings-experts<br/>1-on-1s · expert calls, MNPI-safe"] --> TH
+        INTL["international<br/>HTA · Japan · China · UK"] --> MV
+        ESG["esg-stewardship"] --> TH
+    end
+    IN --> MV
+    ENG -->|EVIDENCE BRIEFS| IV
+    FIN --> IV
+    LEDGER[("evidence ledger<br/>briefs from all five plugins")] --> IV
+    EA["evidence-assembler agent<br/>runs the engines end-to-end for a ticker"] -.-> IV
+    MV --> IV["investable-view capstone<br/>6 layers → scenario matrix → price-implied<br/>→ falsifiable underwriting statement"]
+    TH --> IV
+    subgraph DEC["3 · Decide & communicate"]
+        CO["comms-compliance<br/>IC memo · MNPI scrub · disclosures"]
+        PO["portfolio<br/>sizing · catalyst concentration · pairs"]
+    end
+    IV --> CO
+    IV --> PO
+    subgraph MON["4 · Monitor & learn"]
+        EARN["earnings<br/>preview → live triage → post-print"] --> SD["sell-discipline<br/>scorecards · watchlists · post-mortems"]
+    end
+    PO --> EARN
+    IV -->|falsifiers & early signals| SD
+    SD -->|lessons → base rates & thresholds| TH
+
+    classDef skill fill:#dbeafe,stroke:#2563eb,color:#111827
+    classDef data fill:#dcfce7,stroke:#16a34a,color:#111827
+    classDef agent fill:#fef3c7,stroke:#d97706,color:#111827,stroke-dasharray:5 5
+    classDef brief fill:#fce7f3,stroke:#db2777,color:#111827
+    classDef note fill:#f3f4f6,stroke:#6b7280,color:#111827
+    classDef ext fill:#ede9fe,stroke:#7c3aed,color:#111827
+    class ST,IN,MV,TH,ME,INTL,ESG,CO,PO,EARN,SD skill
+    class FIN,LEDGER data
+    class EA agent
+    class IV brief
+    class E1,E2,E3,E4 ext
+```
+
+*Blue = skills · green = data sources and stores · amber (dashed) = agents · pink = evidence outputs · violet = suite handoffs.*
+
+[**Explore the source workflow and implementation →**](https://github.com/hh-health-AI/healthcare-equity#workflow)
+
+<sub>Reproduced from the project's workflow documentation on 24 September 2026. Labels and connections are preserved; this profile copy does not automatically sync with future repository changes.</sub>
+<!-- workflow-charts:end -->
 
 ## Selected research projects
 
