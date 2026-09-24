@@ -1,190 +1,131 @@
-# HH Health AI — Healthcare Investing, Biotech Research, Public Data & AI
+<!-- Profile redesign: original graphics and copy; layout inspired by github.com/flycran. -->
+<p align="center">
+  <img src="./assets/header.svg" width="100%" alt="HH Health AI — healthcare investing, biomedical evidence and AI. Evidence to assumptions to valuation to human judgment." />
+</p>
+
+<p align="center">
+  <a href="https://github.com/hh-health-AI/healthcare-equity"><b>Explore the flagship</b></a> &nbsp; · &nbsp;
+  <a href="#selected-research-projects"><b>Research projects</b></a> &nbsp; · &nbsp;
+  <a href="https://github.com/HHFinAi"><b>Sustainable finance work</b></a>
+</p>
+
+<blockquote>
+  <p align="center"><b>Better evidence. Explicit assumptions. Falsifiable investment views.</b><br />AI should make research more inspectable—not make judgment less accountable.</p>
+</blockquote>
+
+## About me
+
+I build open-source tools for **healthcare investing, biotech research and AI-assisted fundamental analysis**. My work connects biomedical evidence and public datasets to the questions that matter for an investment thesis: what changes, how it changes the model, and what would prove the thesis wrong.
+
+- **Research:** Biotech, pharmaceuticals, medtech, life sciences tools and healthcare services.
+- **Evidence:** Clinical trials, regulatory catalysts, utilization, reimbursement, provider economics and company filings.
+- **Methods:** DCF, risk-adjusted NPV, scenarios, catalyst analysis and evidence-to-valuation workflows.
 
 <!-- geo:start -->
-## Open-source tools for healthcare equity research
+## Start here: Healthcare Equity Research Platform
 
-HH Health AI builds open-source tools for **healthcare investing, biotech and pharma research, medtech analysis, clinical-trial interpretation, healthcare public-data analysis, valuation, and AI-assisted investment research**.
+<table>
+<tr><td>
+<h3><a href="https://github.com/hh-health-AI/healthcare-equity">healthcare-equity</a></h3>
+<p><b>The flagship integration point for healthcare equity research.</b></p>
+<p>A synthesis layer and 12 modular evidence pipelines connect clinical and regulatory developments, patient populations, commercial adoption, reimbursement, financial disclosures and valuation.</p>
+<p><b>Core value:</b> Turn a source-backed observation into an explicit model assumption and a testable investment view.</p>
+<p><code>Clinical evidence</code> → <code>Probability &amp; demand</code> → <code>Commercial assumptions</code> → <code>DCF / rNPV</code> → <code>Investment thesis</code></p>
+<p><a href="https://github.com/hh-health-AI/healthcare-equity#monorepo-modules"><b>Explore the modules →</b></a></p>
+</td></tr>
+</table>
 
-The flagship project is [**healthcare-equity**](https://github.com/hh-health-AI/healthcare-equity), an integrated research platform connecting:
-
-**scientific evidence → clinical/regulatory probability → patient population → utilization/adoption → reimbursement/pricing → financial forecasts → DCF/rNPV → investment thesis**
-
-Common research areas include **FDA catalysts, ClinicalTrials.gov, CMS reimbursement, Medicare Part D, FAERS, epidemiology, provider economics, procedure volumes, patents/LOE, global market access, SEC EDGAR, and healthcare valuation**.
-
+The platform brings together **ClinicalTrials.gov, FDA, CMS, SEC EDGAR and other primary-source research workflows**. It is the canonical integration point; the standalone project repositories below remain available during migration.
 <!-- geo:end -->
 
+## Selected research projects
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<h3><a href="https://github.com/hh-health-AI/clinical-catalysts">Clinical catalysts</a></h3>
+<p><b>From trial results to underwriting assumptions.</b></p>
+<p>Organize trial readouts and regulatory events around approval probability, label, timing and clinical differentiation.</p>
+<p><code>Clinical trials</code> <code>FDA catalysts</code></p>
+<p><a href="https://github.com/hh-health-AI/healthcare-equity/tree/main/modules/clinical-catalysts">Integrated module →</a></p>
+</td>
+<td width="50%" valign="top">
+<h3><a href="https://github.com/hh-health-AI/cms-reimbursement">CMS reimbursement</a></h3>
+<p><b>Understand the economics of market access.</b></p>
+<p>Connect coverage and payment evidence to access, pricing assumptions and healthcare business economics.</p>
+<p><code>Coverage</code> <code>Payment</code> <code>Market access</code></p>
+<p><a href="https://github.com/hh-health-AI/healthcare-equity/tree/main/modules/cms-reimbursement">Integrated module →</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<h3><a href="https://github.com/hh-health-AI/rx-utilization">Prescription utilization</a></h3>
+<p><b>Test demand against observable evidence.</b></p>
+<p>Use prescribing, utilization and launch proxies to challenge commercial assumptions and revenue trajectories.</p>
+<p><code>Utilization</code> <code>Launch tracking</code></p>
+<p><a href="https://github.com/hh-health-AI/healthcare-equity/tree/main/modules/rx-utilization">Integrated module →</a></p>
+</td>
+<td width="50%" valign="top">
+<h3><a href="https://github.com/hh-health-AI/sec-forensics">SEC forensics</a></h3>
+<p><b>Bring financial discipline to the healthcare thesis.</b></p>
+<p>Examine company filings, accounting signals and insider activity alongside the scientific and commercial evidence.</p>
+<p><code>SEC EDGAR</code> <code>Financial forensics</code></p>
+<p><a href="https://github.com/hh-health-AI/healthcare-equity/tree/main/modules/sec-forensics">Integrated module →</a></p>
+</td>
+</tr>
+</table>
+
+<details>
+<summary><b>Explore all 12 evidence modules</b></summary>
+
+| Research layer | Integrated module |
+| :--- | :--- |
+| Clinical and regulatory | [clinical-catalysts](https://github.com/hh-health-AI/healthcare-equity/tree/main/modules/clinical-catalysts) |
+| Publications, guidelines and expert signals | [evidence-catalysts](https://github.com/hh-health-AI/healthcare-equity/tree/main/modules/evidence-catalysts) |
+| Safety signals | [fda-safety-signals](https://github.com/hh-health-AI/healthcare-equity/tree/main/modules/fda-safety-signals) |
+| Prescription utilization | [rx-utilization](https://github.com/hh-health-AI/healthcare-equity/tree/main/modules/rx-utilization) |
+| Epidemiology and patient populations | [epi-demand](https://github.com/hh-health-AI/healthcare-equity/tree/main/modules/epi-demand) |
+| Coverage and reimbursement | [cms-reimbursement](https://github.com/hh-health-AI/healthcare-equity/tree/main/modules/cms-reimbursement) |
+| Provider adoption | [provider-adoption](https://github.com/hh-health-AI/healthcare-equity/tree/main/modules/provider-adoption) |
+| Provider economics | [provider-economics](https://github.com/hh-health-AI/healthcare-equity/tree/main/modules/provider-economics) |
+| Procedure and coding exposure | [procedure-exposure](https://github.com/hh-health-AI/healthcare-equity/tree/main/modules/procedure-exposure) |
+| Patents, exclusivity and loss of exclusivity | [ip-exclusivity](https://github.com/hh-health-AI/healthcare-equity/tree/main/modules/ip-exclusivity) |
+| International access | [global-access](https://github.com/hh-health-AI/healthcare-equity/tree/main/modules/global-access) |
+| Company filings and accounting | [sec-forensics](https://github.com/hh-health-AI/healthcare-equity/tree/main/modules/sec-forensics) |
+
+</details>
+
+## Tools and research craft
+
+<p align="center">
+  <img src="./assets/toolkit.svg" width="100%" alt="Python for public-data tooling; Markdown for agent instructions; Git for versioned research; GitHub for open collaboration." />
+</p>
+
+**Domain expertise:** `Biotech` · `Pharma` · `Medtech` · `Life Sciences Tools` · `Managed Care` · `Healthcare Services` · `Digital Health`
+
+**Research methods:** `DCF` · `rNPV` · `Scenario Analysis` · `Catalyst Research` · `Evidence Synthesis`
+
 <!-- institutional-positioning:start -->
-## Institutional-quality AI research workflows
+## Research principles
 
-These **AI agents, AI skills, and AI research workflows** are designed for **institutional-quality investment research**. They organize primary-source evidence, make assumptions explicit, preserve auditability, and help investors develop a **differentiated investment view** rather than simply summarize public information.
+**Primary sources first.** Important numbers should retain their source, vintage and limitations.
 
-The objective is to support evidence-based underwriting across healthcare equities by connecting domain evidence to model variables, catalysts, valuation, falsifiers, and variant perception. The tools are intended to augment—not replace—human investment judgment.
+**Evidence is not the conclusion.** Observations, assumptions, calculations and investment judgment should remain distinguishable.
 
+**Models must be challengeable.** A thesis needs explicit sensitivities, disconfirming evidence and a clear account of what would change the view.
+
+**Human judgment stays in the loop.** These AI agents, skills and research workflows are designed to support institutional-quality due diligence—not to replace analyst accountability or imply independent certification.
 <!-- institutional-positioning:end -->
-
-### Healthcare investing × biomedical evidence × public data × AI
-
-I build open-source research tools for **healthcare equity analysis**, connecting clinical evidence, regulatory events, utilization, reimbursement, provider economics, financial disclosures, and valuation.
-
-My focus is a simple question:
-
-> **How can AI improve the quality, speed, and auditability of investment research?**
-
-## About
-
-- Healthcare and biotech research
-- Public-equity analysis and evidence-to-valuation workflows
-- Clinical trials, FDA/regulatory catalysts, epidemiology, and market access
-- Drug utilization, reimbursement, and launch tracking
-- Provider adoption, procedure volumes, and healthcare economics
-- SEC filings and financial forensics
-- AI-assisted research workflows and analyst agents
-- Python-based public-data tooling
-
-## What I'm building
-
-### Healthcare Equity Research Platform
-
-[**healthcare-equity**](https://github.com/hh-health-AI/healthcare-equity) is the flagship project: an open-source research system designed to move from **evidence → assumptions → valuation → investment view**.
-
-```text
-Scientific evidence
-        ↓
-Clinical & regulatory probability
-        ↓
-Addressable population
-        ↓
-Utilization & adoption
-        ↓
-Pricing & reimbursement
-        ↓
-Revenue / margins
-        ↓
-DCF · rNPV · scenario analysis
-        ↓
-Investment thesis
-```
-
-The platform combines modular research engines covering:
-
-| Research layer | Examples |
-|---|---|
-| Clinical & regulatory | Trial readouts, FDA catalysts, precedents |
-| Scientific evidence | Publications, guidelines, KOL signals |
-| Safety | FAERS, MAUDE, regulatory safety signals |
-| Commercial | Prescription utilization, launch tracking |
-| Epidemiology | Patient populations and demand funnels |
-| Market access | CMS coverage, reimbursement, IRA |
-| Providers | Adoption, capacity, and economics |
-| Medtech | Procedure and coding exposure |
-| IP | Patents, exclusivity, LOE, and biosimilars |
-| International | EMA, NICE, Japan, and China access |
-| Financial | SEC filings, accounting, and insider activity |
-
-## Research philosophy
-
-Clinical evidence should ultimately change an explicit model assumption.
-
-```text
-Better efficacy
-→ higher probability of approval and/or peak share
-
-Better safety
-→ broader label, persistence, and adoption
-
-Easier administration
-→ larger accessible population and lower commercial friction
-
-Manufacturing uncertainty
-→ lower probability, delayed launch, and greater required capital
-
-Reimbursement improvement
-→ higher accessible population, price realization, or adoption
-
-Utilization acceleration
-→ evidence for changing revenue trajectories
-```
-
-The objective is not simply to collect information.
-
-It is to build research that is **auditable, falsifiable, and economically actionable**.
-
-## Current focus
-
-I'm currently developing:
-
-- evidence-to-valuation workflows for biotech and healthcare equities
-- public-data pipelines for utilization and reimbursement analysis
-- clinical catalyst and regulatory monitoring
-- healthcare-specific financial and SEC forensics
-- AI research agents for institutional-quality due diligence
-- shared schemas connecting products, indications, trials, utilization, and valuation
-
-## Research domains
-
-**Healthcare**
-
-`Biotech` · `Pharma` · `Medtech` · `Life Sciences Tools` · `Managed Care` · `Healthcare Services` · `Digital Health`
-
-**Investment research**
-
-`Fundamental Research` · `DCF` · `rNPV` · `Scenario Analysis` · `Catalyst Analysis` · `Competitive Intelligence`
-
-**Data**
-
-`ClinicalTrials.gov` · `FDA` · `CMS` · `SEC EDGAR` · `CDC` · `NIH` · `OpenFDA` · `NPI` · `Open Payments`
-
-**Technology**
-
-`Python` · `APIs` · `Data Pipelines` · `AI Agents` · `LLM Research Workflows`
-
-## Featured project
-
-### [healthcare-equity](https://github.com/hh-health-AI/healthcare-equity)
-
-**An integrated open-source research toolkit for healthcare equity analysis.**
-
-The repository brings together research engines for clinical evidence, regulatory catalysts, commercial adoption, reimbursement, epidemiology, provider economics, IP/exclusivity, international access, and financial forensics.
-
-The long-term goal is to create reusable research infrastructure where:
-
-```text
-Company
-  └── Product
-       ├── Indication
-       │    ├── Clinical trials
-       │    ├── Regulatory events
-       │    ├── Epidemiology
-       │    └── Competitive landscape
-       │
-       ├── Utilization
-       ├── Reimbursement
-       ├── Provider adoption
-       ├── Exclusivity
-       │
-       └── Forecast
-            └── Valuation
-```
-
-## Principles
-
-**Primary sources first.**  
-Prefer regulatory filings, government datasets, trial registries, and company disclosures.
-
-**Evidence ≠ conclusion.**  
-Separate observed evidence from interpretation and investment judgment.
-
-**Numbers need provenance.**  
-Important outputs should retain source, vintage, methodology, and limitations.
-
-**Models should be falsifiable.**  
-Every thesis should identify assumptions and evidence that would invalidate them.
-
-**AI should augment analysts, not hide the reasoning.**  
-Automation should increase research coverage while preserving auditability.
 
 ## Connect
 
-If you're working on healthcare investing, biomedical data, AI-enabled research, or open-source healthcare analytics, I'm interested in exchanging ideas.
+Working on healthcare investing, biomedical data or AI-enabled research? Project issues and pull requests are welcome.
 
-Explore the work → [**healthcare-equity**](https://github.com/hh-health-AI/healthcare-equity)
+<p align="center">
+  <a href="https://github.com/hh-health-AI/healthcare-equity/issues"><b>Start a project discussion</b></a> &nbsp; · &nbsp;
+  <a href="https://github.com/HHFinAi"><b>Explore my sustainable finance work</b></a>
+</p>
+
+---
+
+<p align="center"><sub>Research and educational tools—not medical advice or investment recommendations.<br />Public project capabilities vary; inspect each repository's documentation and limitations.</sub></p>
