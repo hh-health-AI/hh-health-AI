@@ -4,9 +4,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/hh-health-AI/healthcare-equity"><b>Explore the flagship</b></a> &nbsp; · &nbsp;
-  <a href="#research-workflow"><b>Workflows</b></a> &nbsp; · &nbsp;
-  <a href="#selected-research-projects"><b>Research projects</b></a>
+  <a href="https://github.com/hh-health-AI/healthcare-equity/tree/main/research-suite#quickstart"><b>Try a demo</b></a> &nbsp; · &nbsp;
+  <a href="https://github.com/hh-health-AI/healthcare-equity/tree/main/examples/research-cases"><b>Read a research case</b></a> &nbsp; · &nbsp;
+  <a href="https://github.com/hh-health-AI/healthcare-equity/tree/main/research-suite/evaluation"><b>Review the evaluation</b></a>
 </p>
 
 <blockquote>
@@ -35,73 +35,37 @@ I build open-source tools for **healthcare investing, biotech research and AI-as
 </td></tr>
 </table>
 
-The platform brings together **ClinicalTrials.gov, FDA, CMS, SEC EDGAR and other primary-source research workflows**. It is the canonical integration point; the standalone project repositories below remain available during migration.
+The platform combines **12 evidence modules**, **nine biomedical workflows**, and an investment synthesis layer. Python utilities retrieve data, compare structured records and calculate scenarios; host-loaded skills guide reading and interpretation. The standalone repositories remain authoritative for their specialist scripts; bundled modules are versioned snapshots.
 <!-- geo:end -->
 
-<!-- workflow-charts:start -->
+## Inspect the research
+
+| Case | Decision question | Reproducible output |
+| :--- | :--- | :--- |
+| [Biotech: HELIOS-B / vutrisiran](https://github.com/hh-health-AI/healthcare-equity/tree/main/examples/research-cases/biotech-trial-rnpv) | How does clinical evidence differ from a completed approval decision? | Approval-gate and commercial rNPV sensitivities. |
+| [Medtech: Intuitive Surgical](https://github.com/hh-health-AI/healthcare-equity/tree/main/examples/research-cases/medtech-procedures-revenue) | How do procedure growth and recurring economics affect revenue? | Platform-specific drivers and revenue sensitivities. |
+| [Managed care: medical costs](https://github.com/hh-health-AI/healthcare-equity/tree/main/examples/research-cases/managed-care-mlr-earnings) | What does a medical-cost-ratio change imply for earnings? | Reconciled premiums and static earnings/EPS sensitivities. |
+
+These are dated research demonstrations using real primary-source facts and explicit modeling assumptions. They are not current stock recommendations or fully underwritten price targets.
+
+[Source-backed semantic development set](https://github.com/hh-health-AI/healthcare-equity/tree/main/research-suite/evaluation/semantic) · [Case verification ledger](https://github.com/hh-health-AI/healthcare-equity/blob/main/skills/model-valuation/references/case-source-audit.md) · [Choose an installation path](https://github.com/hh-health-AI/healthcare-equity#installation)
+
 ## Research workflow
-
-**Discover → underwrite → decide and communicate → monitor and learn.**
-
-The workflow below comes from the [Healthcare Equity Research Platform](https://github.com/hh-health-AI/healthcare-equity#workflow). It shows how evidence engines, valuation, thesis development and ongoing review connect.
 
 ```mermaid
 flowchart TD
-    subgraph DISC["1 · Discover"]
-        ST["screen-themes"] --> IN["initiate<br/>scoping → memo → sub-sector layers"]
-    end
-    subgraph ENG["Evidence engines (co-installed plugins)"]
-        E1["cms-reimbursement"]
-        E2["clinical-catalysts"]
-        E3["provider-adoption"]
-        E4["procedure-exposure"]
-    end
-    FIN[("Financial layer<br/>filings & transcripts · Quartr / EDGAR")]
-    subgraph UW["2 · Underwrite"]
-        MV["model-valuation<br/>economic unit → formula → scenarios"] <--> TH["thesis<br/>variant perception · steel-man · pre-mortem"]
-        ME["meetings-experts<br/>1-on-1s · expert calls, MNPI-safe"] --> TH
-        INTL["international<br/>HTA · Japan · China · UK"] --> MV
-        ESG["esg-stewardship"] --> TH
-    end
-    IN --> MV
-    ENG -->|EVIDENCE BRIEFS| IV
-    FIN --> IV
-    LEDGER[("evidence ledger<br/>briefs from all five plugins")] --> IV
-    EA["evidence-assembler agent<br/>runs the engines end-to-end for a ticker"] -.-> IV
-    MV --> IV["investable-view capstone<br/>6 layers → scenario matrix → price-implied<br/>→ falsifiable underwriting statement"]
-    TH --> IV
-    subgraph DEC["3 · Decide & communicate"]
-        CO["comms-compliance<br/>IC memo · MNPI scrub · disclosures"]
-        PO["portfolio<br/>sizing · catalyst concentration · pairs"]
-    end
-    IV --> CO
-    IV --> PO
-    subgraph MON["4 · Monitor & learn"]
-        EARN["earnings<br/>preview → live triage → post-print"] --> SD["sell-discipline<br/>scorecards · watchlists · post-mortems"]
-    end
-    PO --> EARN
-    IV -->|falsifiers & early signals| SD
-    SD -->|lessons → base rates & thresholds| TH
-
-    classDef skill fill:#dbeafe,stroke:#2563eb,color:#111827
-    classDef data fill:#dcfce7,stroke:#16a34a,color:#111827
-    classDef agent fill:#fef3c7,stroke:#d97706,color:#111827,stroke-dasharray:5 5
-    classDef brief fill:#fce7f3,stroke:#db2777,color:#111827
-    classDef note fill:#f3f4f6,stroke:#6b7280,color:#111827
-    classDef ext fill:#ede9fe,stroke:#7c3aed,color:#111827
-    class ST,IN,MV,TH,ME,INTL,ESG,CO,PO,EARN,SD skill
-    class FIN,LEDGER data
-    class EA agent
-    class IV brief
-    class E1,E2,E3,E4 ext
+    Q["Research question"] --> E["Primary evidence and source ledger"]
+    E --> A["Assumptions and uncertainty"]
+    A --> M["Models and sensitivities"]
+    E --> C["Source and accuracy checks"]
+    C --> M
+    M --> T["Thesis, catalyst and falsifier"]
+    T --> R["Monitor and re-underwrite"]
+    R --> E
 ```
 
-*Blue = skills · green = data sources and stores · amber (dashed) = agents · pink = evidence outputs · violet = suite handoffs.*
+[Detailed source workflow](https://github.com/hh-health-AI/healthcare-equity#workflow) · [Maintenance and synchronization](https://github.com/hh-health-AI/healthcare-equity/blob/main/docs/MAINTENANCE.md)
 
-[**Explore the source workflow and implementation →**](https://github.com/hh-health-AI/healthcare-equity#workflow)
-
-<sub>Reproduced from the project's workflow documentation on 24 September 2026. Labels and connections are preserved; this profile copy does not automatically sync with future repository changes.</sub>
-<!-- workflow-charts:end -->
 
 ## Selected research projects
 
@@ -187,7 +151,7 @@ flowchart TD
 Working on healthcare investing, biomedical data or AI-enabled research? Project issues and pull requests are welcome.
 
 <p align="center">
-  <a href="https://github.com/hh-health-AI/healthcare-equity/issues"><b>Start a project discussion</b></a>
+  <a href="https://github.com/hh-health-AI/healthcare-equity/issues"><b>Contribute a case, adapter or reproducible failure</b></a>
 </p>
 
 ---
