@@ -146,6 +146,12 @@ flowchart TD
 **Human judgment stays in the loop.** These AI agents, skills and research workflows are designed to support institutional-quality due diligence—not to replace analyst accountability or imply independent certification.
 <!-- institutional-positioning:end -->
 
+## Responsible use of AI
+
+AI supports research and education; outputs require source verification and accountable human review. Protect patient information, disclose material AI assistance and retain uncertainty. These tools are not validated for patient care or autonomous investment decisions.
+
+[Read the responsible AI policy](https://github.com/hh-health-AI/hh-health-AI/blob/main/RESPONSIBLE_AI.md) — practical standards for evidence, disclosure, privacy, human oversight and corrections.
+
 ## Connect
 
 Working on healthcare investing, biomedical data or AI-enabled research? Project issues and pull requests are welcome.
